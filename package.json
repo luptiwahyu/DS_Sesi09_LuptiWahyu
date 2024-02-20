@@ -1,0 +1,28 @@
+{
+  "name": "ds_sesi09_luptiwahyu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luptiwahyu/DS_Sesi09_LuptiWahyu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luptiwahyu/DS_Sesi09_LuptiWahyu/issues"
+  },
+  "homepage": "https://github.com/luptiwahyu/DS_Sesi09_LuptiWahyu#readme",
+  "devDependencies": {
+    "@wdio/cli": "^8.32.2",
+    "@wdio/local-runner": "^8.32.2",
+    "@wdio/mocha-framework": "^8.32.2",
+    "@wdio/spec-reporter": "^8.32.2",
+    "dotenv": "^16.4.5"
+  }
+}
