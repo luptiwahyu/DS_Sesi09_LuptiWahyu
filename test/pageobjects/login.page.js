@@ -28,19 +28,18 @@ class LoginPage extends Page {
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async login() {
-        const username = process.env.USERNAME_STANDARD_USER
+    async login(username) {
         const password = process.env.PASSWORD
-        console.log(`USERNAME: ${username}`)
-        console.log(`PASSWORD: ${password}`)
 
+        await this.fieldUsername.waitForDisplayed({ timeout: 2500 })
         await this.fieldUsername.setValue(username);
         await this.fieldPassword.setValue(password);
         await this.buttonLogin.click();
     }
 
     async validateLockedOutUserError() {
-        expect(this.errorLockedOutUser).toBeDisplayed()
+        await this.errorLockedOutUser.waitForDisplayed({ timeout: 2500 })
+        await expect(this.errorLockedOutUser).toBeDisplayed()
     }
 
     /**
